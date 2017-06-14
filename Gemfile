@@ -19,10 +19,19 @@ gem 'autoprefixer-rails'
 
 gem 'faker'
 
-group :development, :test do
+group :development do
   gem 'binding_of_caller'
   gem 'better_errors'
+end
 
+group :development, :test do
+  # permet les tests d'integration / ca va simuler un navigateur
+  gem 'capybara'
+  gem 'poltergeist'
+  # screenshot de page et les ouvrir en preview /pour feedback de
+  gem 'launchy'
+  # couleur
+  gem 'minitest-reporters'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
@@ -30,4 +39,4 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
+# phantomjs est un binaire, permet de simuler un naviateur en ligne de commande
